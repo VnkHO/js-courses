@@ -117,8 +117,6 @@
         <div class="article__container">
           <!-- content -->
           <div class="article__container-content">
-            <p class="article__content--text">Pour les <strong> arrow functions (fonctions fléchées)</strong>, on n'écrit plus le mot-clé function. On met juste une <strong>flèche (=>)</strong> à droite de la liste des arguments.</p>
-            <p class="article__content--text">Exemple:</p>
             <p class="article__content--text">
               <code>
                 <pre class="article__content--code article__content--pre">
@@ -132,9 +130,58 @@
           });
         }
     };
+
+    console.log(teamES5.teamSummary());
+    // TypeError: Cannot read property 'teamName' of undefined
                 </pre>
               </code>
             </p>
+            <p class="article__content--text">On exécute donc une fonction appelée "teamSummary". Et à l'intérieur, on appelle "membres.map". Lorsqu'on appelle "members.map", on passe dans notre fonction d'itérateur. Maintenant, cette fonction qu'on crée, on la transfére à un autre élément de notre base de code. La valeur de l'intérieur de cette fonction est perdue et c'est exactement ce qui se passe ici.</p>
+            <p class="article__content--text">
+              <code>
+                <pre class="article__content--code article__content--pre">
+    const teamES5Bind = {
+        members: ["Vnk", "Dgen"],
+        teamName: "Hellloooo",
+        teamSummary: function() {
+          return this.members.map(
+            function(member) {
+              return `${member} is on team ${this.teamName}`;
+            }.bind(this)
+          );
+        }
+    };
+
+    console.log("ES5 Bind :", teamES5Bind.teamSummary());
+    ES5 Bind : ["Vnk is on team Hellloooo", "Dgen is on team Hellloooo"]
+
+                </pre>
+              </code>
+            </p>
+            <p class="article__content--text">On peut utiliser l'helper "bind" pour afin d'adapter le contexte de la fonction au contexte courant, ce qui signifie que lorsqu'on invoque effectivement la fonction, la valeur de celle-ci sera correcte.</p>
+            <p class="article__content--text">
+              <code>
+                <pre class="article__content--code article__content--pre">
+    const teamES6 = {
+        members: ["Vnk", "Dgen"],
+        teamName: "Hellloooo",
+        teamSummary: function() {
+          // this === team
+          return this.members.map(member => {
+            return `${member} is on team ${this.teamName}`;
+          });
+        }
+    };
+
+    console.log("ES6 : ", teamES6.teamSummary());
+    ES6 : ["Vnk is on team Hellloooo", "Dgen is on team Hellloooo"]
+                </pre>
+              </code>
+            </p>
+            <p class="article__content--text">La fonction fléchée utilise ce qu'on appelle <strong>lexical this</strong></p>
+            <p class="article__content--text">Le mot <strong>lexical</strong> signifie que l'emplacement de ce terme dépend de la façon dont il est interprété ou évalué. Ainsi, selon l'endroit où on place le mot <strong>this</strong>, il changera lorsqu'on  utilise une fonction fléchée.</p>
+            <p class="article__content--text">Lorsque l'on utilise une fonction fléché et que l'on fait référence à <strong>this</strong> à l'intérieur, <strong>this</strong> est automatiquement définie comme égale à <strong>this</strong> dans le <strong>contexte environnant (surrounding context)</strong> (qui dans ce cas est égal à notre "team").</p>
+
             <div class="article__content-container-link">
               <a class="article__content--text article__content--link" href="./arrow-function.html">Voir part 1</a>
             </div>
