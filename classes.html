@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="style.scss" />
+  <link rel="stylesheet" type="text/css" href="header.scss" />
+  <link rel="stylesheet" type="text/css" href="content.scss" />
+  <link rel="stylesheet" type="text/css" href="content-nav.scss" />
+  <script defer src="index.js"></script>
+  <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+  <title>JavaScript - Classes</title>
+</head>
+
+<body>
+  <div class="cursor"></div>
+  <!-- Header -->
+
+  <header id="header" class="header">
+    <nav class="header__nav">
+      <ul class="header__nav-list">
+        <li class="header__nav-list--item">
+          <a class="header__nav-list--link">Courses</a>
+        </li>
+        <li class="header__nav-list--item">
+          <a class="header__nav-list--link">Exercises</a>
+        </li>
+        <li class="header__nav-list--item">
+          <a class="header__nav-list--link">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Content -->
+  <main id="content__main" class="content__main">
+
+
+    <!-- Menu left -->
+
+    <section class="content__section content__section--left">
+      <nav class="content__nav-left">
+        <ul class="content__nav-left-list">
+          <li class="content__nav-left-list--item navIsActive">
+            <a class="content__nav-left-list--link"  href="./const-let.html">Const & let</a>
+          </li>
+          <li class="content__nav-left-list--item">
+            <a class="content__nav-left-list--link" href="./template-strings.html">Template Strings</a>
+          </li>
+          <li class="content__nav-left-list--item">
+            <a class="content__nav-left-list--link" href="./enhanced-object-literals.html">Enhanced Object Literals</a>
+          </li>
+          <li class="content__nav-left-list--item">
+            <a class="content__nav-left-list--link" href="./arrow-function.html">Arrow functions</a>
+          </li>
+          <li class="content__nav-left-list--item">
+            <a class="content__nav-left-list--link" href="./default-function-arguments.html">Default Function Arguments</a>
+          </li>
+          <li class="content__nav-left-list--item">
+            <a class="content__nav-left-list--link" href="./array-methods.html">Array Methods</a>
+          </li>
+          <li class="content__nav-left-list--item">
+            <a class="content__nav-left-list--link" href="./rest-spread-operator.html">Rest and Spread operator </a>
+          </li>
+          <li class="content__nav-left-list--item">
+            <a class="content__nav-left-list--link"href="./destructuring.html" >Destructuring </a>
+          </li>
+          <li class="content__nav-left-list--item">
+            <a class="content__nav-left-list--link" href="./classes.html">Classes </a>
+          </li>
+          <li class="content__nav-left-list--item">
+            <a class="content__nav-left-list--link" href="./generators.html">Generators </a>
+          </li>
+          <li class="content__nav-left-list--item">
+            <a class="content__nav-left-list--link" href="./promises-fetch.html">Promises and Fetch </a>
+          </li>
+        </ul>
+      </nav>
+    </section>
+
+
+
+    <!-- Content right -->
+
+    <section class="content__section content__section--right">
+
+      <!-- Menu right -->
+
+      <nav class="nav content__nav">
+        <ul class="nav__list">
+          <li class="nav__list--item">
+            <a class="nav__list--link">LN</a>
+          </li>
+          <li class="nav__list--item">
+            <a class="nav__list--link">GH</a>
+          </li>
+          <li class="nav__list--item">
+            <a class="nav__list--link">Web</a>
+          </li>
+          <li class="nav__list--item">
+            <a class="nav__list--link">Dri</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Content Article -->
+
+      <article class="content__article">
+        <h1 class="article__title">Classes</h1>
+        <div class="article__container">
+          <!-- content -->
+          <div class="article__container-content">
+            <p class="article__content--text"><strong>Enhanced Object Literals</strong> sont surtout sur la syntax des <strong>object.</strong> Elle permet d'écrire les <strong>objects</strong> d'une manière plus compacte.</p>
+            <p class="article__content--text">Il y a donc deux règles importantes à suivre.</p>
+            <p class="article__content--text">La première règle est qu'à chaque fois que nous faisons référence à une <strong>key (clé)</strong> et à une <strong>value (valeur)</strong> portant exactement le même nom peuvent être condensées en une seule instruction.</p>
+            <p class="article__content--text">La deuxième amélioration qu'on peut faire est autour des functions. Si nous avons une paire <strong>key (clé)</strong> / <strong>value (valeur)</strong> où la valeur est une function, on peut omettre le mot-clé <strong>function</strong> et les <strong>:</strong> </p>
+          </div>
+
+          <!-- code example -->
+          <div class="article__example">
+            <iframe class="article__example--code"
+              src="https://codesandbox.io/embed/happy-elbakyan-di7fz?fontsize=14&hidenavigation=1&theme=dark"
+              title="Enhanced Object Literals"
+              allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media; usb"
+              sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+          </div>
+        </div>
+
+      </article>
+
+
+    </section>
+  </main>
+</body>
+
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="style.scss" />
+  <link rel="stylesheet" type="text/css" href="header.scss" />
+  <link rel="stylesheet" type="text/css" href="content.scss" />
+  <link rel="stylesheet" type="text/css" href="content-nav.scss" />
+  <script defer src="index.js"></script>
+  <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+  <title>JavaScript - Arrow function</title>
+</head>
+
+<body>
+  <div class="cursor"></div>
+  <!-- Header -->
+
+  <header id="header" class="header">
+    <nav class="header__nav">
+      <ul class="header__nav-list">
+        <li class="header__nav-list--item">
+          <a class="header__nav-list--link">Courses</a>
+        </li>
+        <li class="header__nav-list--item">
+          <a class="header__nav-list--link">Exercises</a>
+        </li>
+        <li class="header__nav-list--item">
+          <a class="header__nav-list--link">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Content -->
+  <main id="content__main" class="content__main">
+
+
+    <!-- Menu left -->
+
+    <section class="content__section content__section--left">
+      <nav class="content__nav-left">
+        <ul class="content__nav-left-list">
+          <li class="content__nav-left-list--item navIsActive">
+            <a class="content__nav-left-list--link"  href="./const-let.html">Const & let</a>
+          </li>
+          <li class="content__nav-left-list--item">
+            <a class="content__nav-left-list--link" href="./template-strings.html">Template Strings</a>
+          </li>
+          <li class="content__nav-left-list--item">
+            <a class="content__nav-left-list--link" href="./enhanced-object-literals.html">Enhanced Object Literals</a>
+          </li>
+          <li class="content__nav-left-list--item">
+            <a class="content__nav-left-list--link" href="./arrow-function.html">Arrow functions</a>
+          </li>
+          <li class="content__nav-left-list--item">
+            <a class="content__nav-left-list--link" href="./default-function-arguments.html">Default Function Arguments</a>
+          </li>
+          <li class="content__nav-left-list--item">
+            <a class="content__nav-left-list--link" href="./array-methods.html">Array Methods</a>
+          </li>
+          <li class="content__nav-left-list--item">
+            <a class="content__nav-left-list--link" href="./rest-spread-operator.html">Rest and Spread operator </a>
+          </li>
+          <li class="content__nav-left-list--item">
+            <a class="content__nav-left-list--link"href="./destructuring.html" >Destructuring </a>
+          </li>
+          <li class="content__nav-left-list--item">
+            <a class="content__nav-left-list--link" href="./classes.html">Classes </a>
+          </li>
+          <li class="content__nav-left-list--item">
+            <a class="content__nav-left-list--link" href="./generators.html">Generators </a>
+          </li>
+          <li class="content__nav-left-list--item">
+            <a class="content__nav-left-list--link" href="./promises-fetch.html">Promises and Fetch </a>
+          </li>
+        </ul>
+      </nav>
+    </section>
+
+
+
+    <!-- Content right -->
+
+    <section class="content__section content__section--right">
+
+      <!-- Menu right -->
+
+      <nav class="nav content__nav">
+        <ul class="nav__list">
+          <li class="nav__list--item">
+            <a class="nav__list--link">LN</a>
+          </li>
+          <li class="nav__list--item">
+            <a class="nav__list--link">GH</a>
+          </li>
+          <li class="nav__list--item">
+            <a class="nav__list--link">Web</a>
+          </li>
+          <li class="nav__list--item">
+            <a class="nav__list--link">Dri</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Content Article -->
+
+      <article class="content__article">
+        <div class="article__title-container">
+          <h1 class="article__title">Arrow function</h1>
+          <span class="article__title--part">part 1</span>
+        </div>
+        <div class="article__container">
+          <!-- content -->
+          <div class="article__container-content">
+            <p class="article__content--text">Pour les <strong> arrow functions (fonctions fléchées)</strong>, on n'écrit plus le mot-clé function. On met juste une <strong>flèche (=>)</strong> à droite de la liste des arguments.</p>
+            <p class="article__content--text">Exemple:</p>
+            <p class="article__content--text article__content--code"><code>const addES5 = function(a, b) { return a + b }</code></p>
+            <p class="article__content--text article__content--code"><code>const addES6 = (a, b) => { return a + b }</code></p>
+            <p class="article__content--text">On peut abréger cette ligne de code encore plus que ce que nous avons actuellement grâce à la fonction fléchée.</p>
+            <p class="article__content--text article__content--code"><code>const addES6 = (a, b) => a + b</code></p>
+            <p class="article__content--text">Ainsi, chaque fois qu'on fait face à une seule expression JavaScript, on peut choisir de supprimer les <strong>accolades, {},</strong> et également le mot-clé <strong>return</strong>. On obtient ce qu'on appelle un retour implicite de la fonction.</p>
+            <p class="article__content--text article__content--code"><code>  const double = number => 2 * number;</code></p>
+            <p class="article__content--text">Lorsqu'on a un seul argument, on peut aussi omettre les parenthèses qui l'entoure.</p>
+            <p class="article__content--text article__content--code"><code> const twoES6 = () => { return 2 }</code></p>
+            <p class="article__content--text article__content--code"><code> const twoES6 = () => 2</code></p>
+            <p class="article__content--text">Si on n'a pas d'arguments, on doit quand même mettre les parenthèses.</p>
+            <a class="article__content--text article__content--link" href="./arrow-function-part2.html">Voir part 2</a>
+          </div>
+
+          <!-- code example -->
+          <div class="article__example">
+            <iframe class="article__example--code"
+              src="https://codesandbox.io/embed/elegant-maxwell-clkn6?fontsize=14&hidenavigation=1&theme=dark"
+              title="Arrow Function"
+              allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media; usb"
+              sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+          </div>
+        </div>
+
+      </article>
+
+
+    </section>
+  </main>
+</body>
+
+</html>

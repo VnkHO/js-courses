@@ -1,0 +1,164 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 50%;
+	/** 8px **/
+}
+
+body {
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-weight: 400;
+	line-height: 1.6;
+	-webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/**********************************
+*
+*    MEDIA QUERIES
+*
+***********************************/
+
+
+/* Mobile - 375px to 424px */
+
+
+@media only screen and (min-width: 23.4375em) {
+
+}
+
+/* Large Mobile - 425px to 499px */
+
+@media only screen and (min-width: 26.5625em) {
+
+}
+
+/* Large Mobile - 550 to 1023px */
+
+@media only screen and (min-width: 34.375em) {
+
+}
+
+/* Tablet - 768px to 1023px */
+/** 1rem = 9px **/
+
+
+@media only screen and (min-width: 48em) {
+	html {
+		font-size: 56.25%;
+		/** 9px **/
+	}
+}
+
+/* Small Desktop - 1024px to 1199px */
+
+/** 1rem = 10px **/
+
+
+@media only screen and (min-width: 64em) {
+	html {
+		font-size: 62.5%;
+	}
+}
+
+/* Desktop - 1200px to 1399px */
+
+@media only screen and (min-width: 75em) {
+
+}
+
+/* Big Desktop - 1399px to 1920px */
+
+@media only screen and (min-width: 160em) {
+	html {
+		font-size: 75%;
+	}
+}
+
+::selection {
+  background-color: #b2caf4;
+}
+
+// Cursor
+
+.cursor {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  border: 2px solid white;
+  border-radius: 50%;
+  transition-duration: 200ms;
+  transition-timing-function: ease-out;
+  animation: cursorAnim .5s infinite alternate;
+  pointer-events: none;
+  z-index: 50;
+}
+
+.cursor::after {
+  position: absolute;
+  top: -.2rem;
+  left: -.2rem;
+  content: "";
+  width: 3rem;
+  height: 3rem;
+  border: 1rem solid gray;
+  border-radius: 50%;
+  opacity: .6;
+  animation: cursorAnim2 .5s infinite alternate;
+  z-index: 50;
+
+}
+
+@keyframes cursorAnim {
+  from {
+      transform: scale(1);
+  }
+  to {
+      transform: scale(.7);
+  }
+}
+
+@keyframes cursorAnim2 {
+  from {
+      transform: scale(1);
+  }
+  to {
+      transform: scale(.4);
+  }
+}
+
+@keyframes cursorAnim3 {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(3);
+  }
+  100% {
+      transform: scale(1);
+      opacity: 0;
+  }
+}
+
+.expand {
+  animation: cursorAnim3 .5s forwards;
+  border: 2px solid #f4dcb2;
+  z-index: 50;
+
+}

@@ -1,0 +1,118 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home {
+
+  &__left {
+    position: fixed;
+    top: 10vh;
+    left: 0;
+    width: 35vw;
+    height: calc(100vh - 10vh);
+    background-color: #6F9CEB;
+  }
+
+  &__right {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 65vw;
+    min-height: 100%;
+    height: 100%;
+    // background-color: #F7FFF6;
+    background-color: rgba(5, 5, 5, 1);
+  }
+
+  &__title {
+
+    width: 100%;
+    margin-left: 15vw;
+    font-size: 3.6rem;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    // text-shadow:
+    //   2px 3px 0 #CAE7B9,
+    //   -1px -1px 0 #CAE7B9,  
+    //   1px -1px 0 #CAE7B9,
+    //   -1px 1px 0 #CAE7B9,
+    //   1px 1px 0 #CAE7B9;
+  
+    &--sup {
+      position: relative;
+      top: -.5rem;
+      left: -1rem;
+      // color: #050505;
+      color: #F7FFF6;
+      font-size: 2rem;
+      letter-spacing: 0;
+      text-shadow:  none;
+      background: initial;
+      background-clip: initial;
+      -webkit-background-clip: initial;
+      -webkit-text-fill-color: initial;
+      -webkit-text-stroke: initial;
+    }
+
+    &--link {
+      // -webkit-text-stroke: 2px #050505;
+
+      // color: #F7FFF6;
+      // color: #6F9CEB;
+      background: linear-gradient(to right, #6F9CEB, #b2caf4);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1.4em;
+
+    }
+  }
+
+  &__array {
+    position: fixed;
+    bottom: 0;
+    left: 16vw;
+    display: flex;
+    width: 25vw;
+    height: 75vh;
+    background: linear-gradient(to bottom, #6F9CEB, #b2caf4);
+    // box-shadow: 4px 4px 3px 0 rgba(5, 5, 5, .4);
+
+
+
+    // &--left {
+    //   width: 50%;
+    //   height: 100%;
+    //   background-color: #F7FFF6;
+
+
+    // }
+
+    // &--right {
+    //   width: 50%;
+    //   height: 100%;
+    //   background-color: #F7FFF6;
+
+    // }
+  }
+}
+
+.home__title-container {
+  position: absolute;
+  bottom: 16vw;
+  left: -2vw;
+  z-index: 100;
+}
+
+.home__title--primary {
+  font-size: 7vw;
+  transform: rotate(-90deg);
+  color: transparent;
+  -webkit-text-stroke-width: 2.3px;
+  -webkit-text-stroke-color: #F7FFF6;
+}
