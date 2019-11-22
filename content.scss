@@ -102,10 +102,12 @@
       line-height: 1.4em;
   }
 
+  &__content-container-link {
+    display: flex;
+    justify-content: space-between;
+  }
+
   &__content--link {
-    position: absolute;
-    bottom: -12rem;
-    right: 4rem;
     font-size: 2rem;
     -webkit-text-stroke: 1px #050505;
     color: #F7FFF6;
